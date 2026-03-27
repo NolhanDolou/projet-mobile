@@ -41,4 +41,9 @@ class Task {
       description: json['description'],
     );
   }
+  factory Task.newTask(){
+    nb++; //attribut static de la classe.
+    return Task(id: nb, title: 'title $nb', tags: ['tags $nb'], nbhours:
+    nb, difficulty: nb%5, description: 'description $nb');
+  }
 }
